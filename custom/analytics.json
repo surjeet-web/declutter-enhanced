@@ -1,0 +1,145 @@
+{
+  "Groups": [
+    {
+      "name": "UI and Navigation",
+      "description": "The pages you visit and the button interactions are collected.",
+      "reason": "Understanding how you're navigating and using the extension helps me improve the user experience.",
+      "events": [
+        {
+          "id": "page_view",
+          "isSent": "when user navigates the extension",
+          "name": "page_view",
+          "params":{
+            "page_title": "{page_title}",
+            "page_path": "{page_path}"
+          }
+        },
+        {
+          "id": "add_folder",
+          "isSent": "when user adds a folder",
+          "name": "add_folder",
+          "params":{
+            "folder_name": "{folder_name}"
+          }
+        },
+        {
+          "id": "remove_folder",
+          "isSent": "when user removes a folder",
+          "name": "remove_folder",
+          "params":{
+            "folder_name": "{folder_name}"
+          }
+        },
+        {
+          "id": "update_folder_label",
+          "isSent": "when user updates the folder label",
+          "name": "update_folder_label",
+          "params":{
+            "folder_name": "{folder_name}",
+            "folder_label": "{folder_label}"
+          }
+        },
+        {
+          "id": "update_folder_name",
+          "isSent": "when user updates the folder name",
+          "name": "update_folder_name",
+          "params":{
+            "folder_name": "{folder_name}"
+          }
+        },
+        {
+          "id": "update_filters",
+          "isSent": "when user updates filters",
+          "name": "update_filters",
+          "params":{
+            "folder_name": "{folder_name}",
+            "folder_filters": "{folder_filters}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Structures and Preferences",
+      "description": "Details about the structures that are added, removed, imported or exported, and your preferences.",
+      "reason": "Understanding the structures you're using and your preferences helps me improve the extension.",
+      "events": [
+        {
+          "id": "run",
+          "isSent": "when user clicks any structure",
+          "name": "run",
+          "params": {
+            "structure_name": "{structure_name}",
+            "folder_count": "{folder_count}",
+            "filter_count": "{filter_count}",
+            "saveBeforeRun":"{saveBeforeRun}",
+            "createTopFolder":"{createTopFolder}",
+            "removeOldEmptyFolders":"{removeOldEmptyFolders}",
+            "removeNewEmptyFolders":"{removeNewEmptyFolders}",
+            "debug":"{debug}",
+            "version": "{version}"
+          }
+        },
+        {
+          "id": "add_structure",
+          "isSent": "when user adds a structure",
+          "name": "add_structure",
+          "params": {
+            "structure_name": "{structure_name}"
+          }
+        },
+        {
+          "id": "saved_structure",
+          "isSent": "when user saves a structure",
+          "name": "saved_structure",
+          "params": {
+            "structure_name": "{structure_name}",
+            "folder_count": "{folder_count}",
+            "filter_count": "{filter_count}"
+          }
+        },
+        {
+          "id": "imported_structure",
+          "isSent": "when user imports a structure",
+          "name": "imported_structure",
+          "params": {
+            "structure_name":"{structure_name}",
+            "folder_count":"{folder_count}",
+            "filter_count":"{filter_count}",
+            "version":"{version}"
+          }
+        },
+        {
+          "id": "exported_structure",
+          "isSent": "when user exports a structure",
+          "name": "exported_structure",
+          "params": {
+            "structure_name":"{structure_name}",
+            "version":"{version}"
+          }
+        },
+        {
+          "id": "deleted_structure",
+          "isSent": "when user deletes a structure",
+          "name": "deleted_structure",
+          "params": {
+            "structure_name":"{structure_name}",
+            "folder_count":"{folder_count}",
+            "filter_count":"{filter_count}"
+          }
+        },
+        {
+          "id": "saved_preferences",
+          "isSent": "when user edits the preferences",
+          "name": "saved_preferences",
+          "params": {
+            "saveBeforeRun":"{saveBeforeRun}",
+            "createTopFolder":"{createTopFolder}",
+            "removeOldEmptyFolders":"{removeOldEmptyFolders}",
+            "removeNewEmptyFolders":"{removeNewEmptyFolders}",
+            "debug":"{debug}"
+          }
+        }
+      ]
+    }
+  ]
+}

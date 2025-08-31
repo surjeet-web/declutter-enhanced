@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declutter Enhanced - Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2A5CAA, #00A896);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 0.5rem 0 0;
+            opacity: 0.9;
+        }
+        .demo-frame {
+            width: 100%;
+            height: 800px;
+            border: none;
+            display: block;
+        }
+        .features {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .feature {
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .feature h3 {
+            margin: 0 0 1rem;
+            color: #2A5CAA;
+        }
+        .feature ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        .feature li {
+            margin-bottom: 0.5rem;
+        }
+        .instructions {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+        .instructions h2 {
+            margin: 0 0 1rem;
+            color: #333;
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .instructions li {
+            margin-bottom: 0.8rem;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 Declutter Enhanced</h1>
+            <p>AI-Powered After Effects Project Organization</p>
+        </div>
+
+        <iframe src="src/index.html" class="demo-frame"></iframe>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🤖 AI-Powered Organization</h3>
+                <ul>
+                    <li>Automatic project type detection</li>
+                    <li>Smart folder structure suggestions</li>
+                    <li>Naming consistency analysis</li>
+                    <li>Learning from user patterns</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>📋 Advanced Templates</h3>
+                <ul>
+                    <li>Built-in professional templates</li>
+                    <li>Custom template creation</li>
+                    <li>Import/export functionality</li>
+                    <li>Filter-based auto-organization</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>📊 Comprehensive Analytics</h3>
+                <ul>
+                    <li>Project health scoring</li>
+                    <li>Usage pattern tracking</li>
+                    <li>Performance monitoring</li>
+                    <li>Trend analysis</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>🎨 Modern Interface</h3>
+                <ul>
+                    <li>Clean, intuitive design</li>
+                    <li>Multiple theme options</li>
+                    <li>Keyboard shortcuts</li>
+                    <li>Accessibility features</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>🚀 How to Use This Demo</h2>
+            <ol>
+                <li><strong>Explore the Dashboard:</strong> View the project health overview and quick actions</li>
+                <li><strong>Try AI Analysis:</strong> Click "AI Analysis" to see smart suggestions in action</li>
+                <li><strong>Browse Templates:</strong> Navigate to the Templates tab to see built-in structures</li>
+                <li><strong>Check Analytics:</strong> View the Analytics panel for usage insights</li>
+                <li><strong>Test Settings:</strong> Click the gear icon to explore theme and preference options</li>
+            </ol>
+
+            <div class="note">
+                <strong>Note:</strong> This is a demo version running in mock mode. In the actual After Effects extension, 
+                all features would interact with real project data and perform actual organization operations.
+            </div>
+
+            <h2>🛠 Development Features</h2>
+            <ul>
+                <li><strong>Modular Architecture:</strong> Clean separation of concerns with services and components</li>
+                <li><strong>State Management:</strong> Centralized state with undo/redo support</li>
+                <li><strong>Event System:</strong> Decoupled communication between components</li>
+                <li><strong>Responsive Design:</strong> Adapts to different panel sizes</li>
+                <li><strong>Accessibility:</strong> Full keyboard navigation and screen reader support</li>
+                <li><strong>Performance:</strong> Optimized for large projects with thousands of assets</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add some demo interactivity
+        console.log('Declutter Enhanced Demo loaded');
+        
+        // Listen for messages from the iframe
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'demo-action') {
+                console.log('Demo action:', event.data.action);
+            }
+        });
+    </script>
+</body>
+</html>

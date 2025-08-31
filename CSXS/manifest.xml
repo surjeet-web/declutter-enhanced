@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest
+Version="6.0"
+ExtensionBundleId="com.aescripts.declutter"
+ExtensionBundleVersion="1.5.2"
+ExtensionBundleName="Declutter"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+<ExtensionList>
+  <Extension Id="com.aescripts.declutter.main" Version="1.5.2" />
+  <Extension Id="com.aescripts.declutter.about" Version="4.02.000" />
+</ExtensionList>
+<ExecutionEnvironment>
+  <HostList>
+    <Host Name="AEFT" Version="[0.0,99.9]" />
+  </HostList>
+  <LocaleList>
+    <Locale Code="All" />
+  </LocaleList>
+  <RequiredRuntimeList>
+    <RequiredRuntime Name="CSXS" Version="9.0" />
+  </RequiredRuntimeList>
+</ExecutionEnvironment>
+<DispatchInfoList>
+  <Extension Id="com.aescripts.declutter.main">
+    <DispatchInfo>
+      <Resources>
+        <MainPath>./main/index.html</MainPath>
+        <CEFCommandLine>
+          <Parameter>--v=0</Parameter>
+          <Parameter>--enable-nodejs</Parameter>
+          <Parameter>--mixed-context</Parameter>
+        </CEFCommandLine>
+      </Resources>
+      <Lifecycle>
+        <AutoVisible>true</AutoVisible>
+      </Lifecycle>
+      <UI>
+        <Type>Panel</Type>
+        <Menu>Declutter</Menu>
+        <Geometry>
+          <Size>
+            <Width>600</Width>
+            <Height>650</Height>
+          </Size>
+        </Geometry>
+        <Icons>
+          <Icon Type="Normal">./assets/icon-dark.png</Icon>
+          <Icon Type="DarkNormal">./assets/icon-light.png</Icon>
+          <Icon Type="RollOver">./assets/icon-dark.png</Icon>
+          <Icon Type="DarkRollOver">./assets/icon-light.png</Icon>
+        </Icons>
+      </UI>
+    </DispatchInfo>
+  </Extension>
+  <Extension Id="com.aescripts.declutter.about">
+    <DispatchInfo >
+      <Resources>
+        <MainPath>./dialog/dialog.html</MainPath>
+        <CEFCommandLine>
+          <Parameter>--enable-nodejs</Parameter>
+          <Parameter>--allow-file-access-from-files</Parameter>
+          <Parameter>--allow-file-access</Parameter>
+        </CEFCommandLine>
+      </Resources>
+      <Lifecycle>
+        <AutoVisible>true</AutoVisible>
+      </Lifecycle>
+      <UI>
+        <Type>Modeless</Type>
+        <Geometry>
+          <Size>
+            <Height>440</Height>
+            <Width>350</Width>
+          </Size>
+          <MaxSize>
+            <Height>500</Height>
+            <Width>350</Width>
+          </MaxSize>
+          <MinSize>
+            <Height>100</Height>
+            <Width>350</Width>
+          </MinSize>
+        </Geometry>
+      </UI>
+    </DispatchInfo>
+</Extension>
+</DispatchInfoList>
+</ExtensionManifest>

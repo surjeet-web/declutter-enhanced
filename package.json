@@ -1,0 +1,90 @@
+{
+  "name": "declutter-enhanced",
+  "version": "1.5.2",
+  "description": "Enhanced After Effects project organization extension with AI-powered features",
+  "main": "src/js/app.js",
+  "scripts": {
+    "dev": "live-server src --port=3000 --no-browser",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "postcss src/styles/*.css --dir dist/styles",
+    "build:js": "webpack --mode production",
+    "test": "jest",
+    "lint": "eslint src/js/**/*.js",
+    "format": "prettier --write src/**/*.{js,css,html}",
+    "package": "npm run build && npm run package:zxp",
+    "package:zxp": "zxpbuilder -p src -o dist/Declutter-Enhanced.zxp"
+  },
+  "keywords": [
+    "after-effects",
+    "cep",
+    "extension",
+    "organization",
+    "ai",
+    "workflow",
+    "productivity"
+  ],
+  "author": "Declutter Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.8.0",
+    "eslint": "^8.42.0",
+    "jest": "^29.5.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.8",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "Chrome >= 80",
+    "Firefox >= 75",
+    "Safari >= 13"
+  ],
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "globals": {
+      "CSInterface": "readonly",
+      "CSEvent": "readonly",
+      "SystemPath": "readonly",
+      "EventBus": "readonly",
+      "StateManager": "readonly",
+      "AEService": "readonly",
+      "AIService": "readonly",
+      "TemplateService": "readonly",
+      "AnalyticsService": "readonly"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2
+  }
+}
