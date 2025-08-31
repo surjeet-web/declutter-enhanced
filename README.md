@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Declutter Enhanced - After Effects Organization Extension
 
 A powerful After Effects extension that revolutionizes project organization with AI-powered suggestions, smart templates, and comprehensive analytics.
@@ -271,3 +272,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 ---
 
 **Made with ❤️ for the After Effects community**
+=======
+# declutter-enhanced
+AI-powered After Effects project organization extension with smart templates, analytics, and modern UI
+>>>>>>> a16d5b2899ae68e0f0d40596575ff6ef941184e4
